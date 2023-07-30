@@ -8,6 +8,7 @@ cada impresión), sustituyendo los siguientes:
 - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
 """
 
+
 def fizz_buzz():
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 ==0:
@@ -20,6 +21,7 @@ def fizz_buzz():
             print(i)
 
 fizz_buzz()
+
 
 """
 Reto #1: ¿ES UN ANAGRAMA?
@@ -42,3 +44,25 @@ def anagrama(palabra1, palabra2):
 
 resultado = anagrama("ramon","Ramon")
 print(resultado)
+
+
+"""
+Reto #2: LA SUCESIÓN DE FIBONACCI
+Escribe un programa que imprima los 50 primeros números de la sucesión
+de Fibonacci empezando en 0.
+- La serie Fibonacci se compone por una sucesión de números en
+  la que el siguiente siempre es la suma de los dos anteriores.
+  0, 1, 1, 2, 3, 5, 8, 13...
+
+"""
+
+def fibonacci():
+    anterior = 0
+    siguiente = 1
+    for i in range(0, 51):
+        print(anterior)
+        suma = anterior + siguiente
+        anterior = siguiente
+        siguiente = suma
+
+fibonacci()
