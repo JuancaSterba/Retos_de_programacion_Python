@@ -32,10 +32,13 @@ verdadero o falso (Bool) según sean o no anagramas.
 """
 
 def anagrama(palabra1, palabra2):
+    if palabra1.lower() == palabra2.lower():
+        return False
+    
     if sorted(palabra1.lower()) == sorted(palabra2.lower()):
         return True
     else:
         return False
 
-resultado = anagrama("ramon","ramen")
+resultado = anagrama("ramon","Ramon")
 print(resultado)
