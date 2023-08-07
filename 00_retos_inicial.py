@@ -106,15 +106,16 @@ def area(*lados):
         area = lado ** 2
         print(f"El area del cuadrado es: {area}")
     elif len(lados) == 2:
-        lado = lados[0]
+        lado1 = lados[0]
         lado2 = lados[1]
         area = lado * lado2
         print(f"El area del rectángulo es: {area}")
     elif len(lados) == 3:
-        lado = lados[0]
+        lado1 = lados[0]
         lado2 = lados[1]
         lado3 = lados[2]
-        area = (lado * lado2) / 2
+        s = (lado1 + lado2 + lado3)/2
+        area = math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3)) # math esta importado mas arriba
         print(f"El area del triángulo es: {area}")
     else:
         print("El polígono no es válido")
