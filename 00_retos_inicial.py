@@ -108,16 +108,16 @@ def area(*lados):
     elif len(lados) == 2:
         lado1 = lados[0]
         lado2 = lados[1]
-        area = lado * lado2
+        area = lado1 * lado2
         print(f"El area del rectángulo es: {area}")
     elif len(lados) == 3:
         lado1 = lados[0]
         lado2 = lados[1]
         lado3 = lados[2]
         s = (lado1 + lado2 + lado3)/2
-        area = math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3)) # math esta importado mas arriba
+        area = math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3)) # math esta importado mas arriba, se utiliza fórmula de Herón
         print(f"El area del triángulo es: {area}")
     else:
         print("El polígono no es válido")
 
-area(3,4,5,6)
+area(5, 4, 7)
