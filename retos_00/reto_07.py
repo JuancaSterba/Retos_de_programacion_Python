@@ -10,16 +10,6 @@ y que muestre el recuento final de todas ellas.
 
 """
 
-"""def cuenta_palabras(texto):
-  palabras = texto.split()
-  dicc = {}
-  for palabra in palabras:
-      if palabra in dicc:
-          dicc[palabra] += 1
-      else:
-          dicc[palabra] = 1
-  return dicc"""
-  
 def cuenta_palabras(texto):
   texto = texto.lower()
   texto = texto.replace(".", "").replace(",", "").replace(":", "").replace(";","")
