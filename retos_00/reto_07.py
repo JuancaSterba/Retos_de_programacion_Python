@@ -10,6 +10,8 @@ y que muestre el recuento final de todas ellas.
 
 """
 
+import json
+
 def cuenta_palabras(texto):
   texto = texto.lower()
   texto = texto.replace(".", "").replace(",", "").replace(":", "").replace(";","")
@@ -22,6 +24,9 @@ def cuenta_palabras(texto):
           dicc[palabra] = 1
   return dicc  
 
-texto = "Python es un lenguaje de programación de propósito general, de uso común, y de código abierto."
+texto = "Python es un lenguaje de programacion de propsito general, de uso comun, y de codigo abierto."
 
-print(cuenta_palabras(texto))
+resultado = cuenta_palabras(texto)
+json_resultado = json.dumps(resultado, indent=4)  # Con indent para formatear con 4 espacios
+
+print(json_resultado)
